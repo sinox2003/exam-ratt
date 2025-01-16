@@ -19,22 +19,22 @@ public class UtilisateurService  {
     }
 
     public List<Utilisateur> findAllUtilisateurs() {
-        return utilisateurRepository.findAllUtilisateurs();
+        return utilisateurRepository.findAll();
     }
 
     public Optional<Utilisateur> findUtilisateurById(Long id) {
-        return utilisateurRepository.findUtilisateurById(id);
+        return utilisateurRepository.findById(id);
     }
 
     public Utilisateur saveUtilisateur(Utilisateur utilisateur) {
-        return utilisateurRepository.saveUtilisateur(utilisateur);
+        return utilisateurRepository.save(utilisateur);
     }
 
     public void deleteUtilisateur(Long id) {
-        utilisateurRepository.deleteUtilisateur(id);
+        utilisateurRepository.deleteById(id);
     }
 
     public Utilisateur updateUtilisateur(Utilisateur utilisateur) {
-        return utilisateurRepository.updateUtilisateur(utilisateur);
+        return utilisateurRepository.save(utilisateur);
     }
 }
